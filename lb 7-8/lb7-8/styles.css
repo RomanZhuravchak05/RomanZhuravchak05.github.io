@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+header span {
+    color: #ff4081;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #ddd;
+}
+
+.filter-types {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-types label {
+    padding: 0.5rem 1rem;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-types input {
+    display: none;
+}
+
+.filter-types input:checked + label {
+    background-color: #ff4081;
+    color: #fff;
+}
+
+.filter-calories {
+    display: flex;
+    align-items: center;
+}
+
+.filter-calories label {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.filter-calories input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    position: relative;
+    height: 300px; 
+    transition: filter 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover;
+    object-position: top; 
+}
+
+.card .line {
+    width: 90%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1rem;
+    text-align: center;
+    margin: auto 0 1rem;
+    color: #333;
+}
+
+input[type="radio"]:checked ~ .gallery .card {
+    filter: grayscale(100%); 
+}
+
+input#all:checked ~ .gallery .card,
+input#tort:checked ~ .gallery .tort,
+input#pirig:checked ~ .gallery .pirig,
+input#rulet:checked ~ .gallery .rulet,
+input#tis:checked ~ .gallery .tis,
+input#syr:checked ~ .gallery .syr {
+    filter: none; 
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ff4081;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-types {
+        flex-wrap: wrap;
+    }
+}

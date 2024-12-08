@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тортики & Тістечка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Тортики <span>&</span> Тістечка</h1>
+    </header>
+    <main>
+        <section class="filters">
+            <div class="filter-types">
+                <input type="radio" name="type" id="all" checked>
+                <label for="all">Всі</label>
+                <input type="radio" name="type" id="tort">
+                <label for="tort">Торти</label>
+                <input type="radio" name="type" id="pirig">
+                <label for="pirig">Пироги</label>
+                <input type="radio" name="type" id="rulet">
+                <label for="rulet">Рулети</label>
+                <input type="radio" name="type" id="tis">
+                <label for="tis">Тістечка</label>
+                <input type="radio" name="type" id="syr">
+                <label for="syr">Сирники</label>
+            </div>
+            <div class="filter-calories">
+                <label for="calories">Калорії:</label>
+                <input type="number" id="calories" placeholder="Макс. калорії">
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="card tort">
+                <img src="images/chocolate_cake.jpg" alt="Шоколадний торт">
+                <div class="line"></div>
+                <p>Торт: Шоколадний</p>
+            </div>
+            <div class="card pirig">
+                <img src="images/pie.jpg" alt="Яблучний пиріг">
+                <div class="line"></div>
+                <p>Пиріг: Яблучний з корицею</p>
+            </div>
+            <div class="card rulet">
+                <img src="images/roll.jpg" alt="Рулет">
+                <div class="line"></div>
+                <p>Рулет: Какао-мрія</p>
+            </div>
+            <div class="card tis">
+                <img src="images/cupcake.jpg" alt="Капкейк">
+                <div class="line"></div>
+                <p>Капкейк: Ванільний рай</p>
+            </div>
+            <div class="card syr">
+                <img src="images/cheesecake.jpg" alt="Сирник">
+                <div class="line"></div>
+                <p>Сирник: Нью-Йорк</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-desktop">
+        <p>Контакти:</p>
+        <a href="mailto:tortik@smakota.ua">tortik@smakota.ua</a>
+        <p>© 2019 Smakota</p>
+    </footer>
+</body>
+</html>
